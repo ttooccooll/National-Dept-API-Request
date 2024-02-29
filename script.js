@@ -22,20 +22,20 @@ async function fetchNationalDebt() {
                 console.log('Total Public Debt Outstanding:', totalPublicDebtOutstanding);
                 const firstTwoDigits = totalPublicDebtOutstanding.toString().slice(0, 2);
                 console.log('First Two Digits:', firstTwoDigits);
-                const fedHighScoreBox = document.getElementById('fedhighscoreBox');
-                console.log('Fed High Score Box:', fedHighScoreBox);
-                if (fedHighScoreBox) {
-                    fedHighScoreBox.textContent = `Fed's Score: $${totalPublicDebtOutstanding} Trillion`;
+                const fedDebt = document.getElementById('fedDebt');
+                console.log('Fed Debt:', fedDebt);
+                if (fedDebt) {
+                    fedDebt.textContent = `US National Debt: $${totalPublicDebtOutstanding}`;
                 } else {
-                    console.error('Fed High Score Box not found.');
+                    console.error('Fed Debt not found.');
                 }
             } else {
                 console.error('Total public debt outstanding data not available or null/undefined.');
-                const fedHighScoreBox = document.getElementById('fedhighscoreBox');
-                if (fedHighScoreBox) {
-                    fedHighScoreBox.textContent = `Fed's Score: Data Not Available`;
+                const fedDebt = document.getElementById('fedDebt');
+                if (fedDebt) {
+                    fedDebt.textContent = `Fed's: Data Not Available`;
                 } else {
-                    console.error('Fed High Score Box not found.');
+                    console.error('Fed Debt not found.');
                 }
             }
         } else {
