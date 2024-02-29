@@ -25,7 +25,7 @@ async function fetchNationalDebt() {
                 const fedHighScoreBox = document.getElementById('fedhighscoreBox');
                 console.log('Fed High Score Box:', fedHighScoreBox);
                 if (fedHighScoreBox) {
-                    fedHighScoreBox.textContent = `Fed's Score: $${firstTwoDigits} Trillion`;
+                    fedHighScoreBox.textContent = `Fed's Score: $${totalPublicDebtOutstanding} Trillion`;
                 } else {
                     console.error('Fed High Score Box not found.');
                 }
